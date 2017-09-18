@@ -1,0 +1,29 @@
+extends base.jade
+
+block content
+  //文章列表
+  .post_list
+    for post in posts
+      .post_preview
+        //文章标题
+        +font(noto+1)
+        h2.title
+          a(href=post.url, target="_blank") {{ post.title }}
+        //文章摘要
+        +font(noto)
+        p.content= post.content(100)
+        //文章信息
+        .info
+          //显示文章分类
+          +font(kai)
+          if post.category
+            a.category(href=post.category.url, target="_blank")
+              span= post.category.title
+          //显示标签
+          if post.tags
+            span &nbsp;|&nbsp;
+              for tag in post.tags
+                a.tag(href="/tags/{{ tag }}", target="_blank")
+                  span= tag
+          //显示日期
+          p.date= post.date("%Y/%m/%d")

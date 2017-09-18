@@ -1,0 +1,37 @@
+html
+    head
+      +h.headers
+      block title
+        title= site.title
+      +h.load("markdown")
+      +h.load("/template/style.scss")
+
+    body
+      
+      //导航栏
+      .sidebar
+        +site.just_nav
+        //页头部分
+        .header
+          +font(hanazono)
+          .header_img
+            +side.background_image
+            img(src=site.background_image, alt="header")
+          .header_title
+              h1(title="")
+                a(href="/") {{ site.title }}
+          .description
+            if site.configs.sub_title
+              span.site_subtitle= site.configs.sub_title[:16]
+      
+      block content
+            
+      .footer
+        p.designer
+          span Designed by&nbsp;
+            a(href="https://matrixk.bitcron.com/", target="_blank")  矩阵良
+          span | Powered by&nbsp;
+            a(href="https://www.bitcron.com/", target="_blank")  Bitcron
+        p.copyright
+          .copyright= "© %s %s" % (site.now.year, _("Copyright Reserved"))
+        +h.paginator(pre_label="←",  next_label="→")
