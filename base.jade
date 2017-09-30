@@ -23,9 +23,12 @@ html
           .description
             if site.configs.sub_title
               span.site_subtitle= site.configs.sub_title[:16]
-      
+
       block content
-            
+        +font(noto+1)
+        +font(noto)
+        +font(kai)
+
       .footer
         p.designer
           span Designed by&nbsp;
