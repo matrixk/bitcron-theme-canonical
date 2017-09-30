@@ -10,5 +10,5 @@ block content
   .posts_in_list
     entries = get_data(type='post', limit=40, sort='desc')
     ul: for post in posts: li
-		  span.date= post.date.format("%Y/%m/%d")
-		  a(href=post.url, title=post.title)= post.title
+      span.date= post.date.format("%Y/%m/%d")
+      a(href=post.url, title=post.title)= post.title
