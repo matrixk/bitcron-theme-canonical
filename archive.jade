@@ -1,5 +1,10 @@
 extends base.jade
+
 block content
+  
+  +font('hanazono')
+    h2.post_title='归档'
+  
   entries = get_data(type='post', limit=40, sort='desc').group('-date:year')
   .post: for sub_title, posts in entries: .post-archive
     h2= sub_title
