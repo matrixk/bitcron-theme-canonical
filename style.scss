@@ -7,7 +7,7 @@ Special Thanks: 风海流、水八口
 MIT License: Copyright (c) 2017 矩阵良
 */
 
-$bgcolor: #e3e3e3;
+$bgcolor: #eaeaea;
 $dark: #383838;
 $light: #fbfbfb;
 $red: #ff5656;
@@ -47,15 +47,11 @@ footer, header, hgroup, menu, nav, section {
 /*body----------------------------------------*/
 
 body {
-  font: normal 20px Arial, Helvetice, Verdana, sans-serif;
+  font: normal 1em Arial, Helvetice, Verdana, sans-serif;
   background-color: $bgcolor;
-  line-height: 2.0em;
+  line-height: 1.8em;
   margin: 0 auto;
-  padding: 50px 15% 50px 15%;
-  }
-ol, ul {
-  list-style: none;
-  color: $dark ;
+  padding: 1em 15% 1em 15%;
   }
 blockquote, q {
   quotes: none;
@@ -79,27 +75,73 @@ div {
 }
 
 /*Navigator----------------------*/
-nav{
-  text-align: center;
+.nav{
+  margin-bottom: 2em;
+  box-shadow: 1px 1px 1px 1px $dark;
 }
 
+.bitcron_nav_container {
+  height: auto;
+  width: auto;
+  text-align: center;
+  background-color: $dark;
+  }
+
+.bitcron_nav_container li {
+  display: inline-block;
+  list-style:none;
+  font-size: 1.2em;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  color: $light;
+  }
+
+.bitcron_nav_container li a {
+  text-align: center;
+  color: $light;
+  }
+
+.bitcron_nav_container li a:hover {
+  color: $red;
+  }
 
 /*Site Header--------------------*/
 
-.site {
-  margin-top: 20px;
-  margin-bottom: 20px;
+header {position: relative}
+
+header:before, header:after {
+  content: ' ';
+  position: absolute;
+  left: 3vw; right: 3.5vw;
+  background-image:url(/template/separate.png)
 }
 
+header:before {top: -20px; bottom: calc(100% + 12px)}
+header:after {bottom: -20px; top: calc(100% + 12px)}
+
+
+.site_main {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: $light;
+  box-shadow: 1px 1px 1px 1px $words;
+  }
+.siteheader {
+  margin-top: 5em;
+  margin-bottom: 4em;
+  }
 .description {
-  margin-top: 50px;
+  margin-top: auto;
   margin-left: 3vw;
   margin-right: 3vw;
 }
 .description > .with_font {
-  margin-top: 0px;
+  margin-top: auto;
   margin-bottom: auto;
-  height: 2.4em;
+  height: 2.3em;
 }
 .site_description {
   font-size: 0.8em;
@@ -108,9 +150,7 @@ nav{
   display:table-cell;      /*按照单元格的样式显示元素*/
   vertical-align:bottom;   /*底对齐*/
 }
-.site_main {
-  background-color: $light;
-  }
+
 .header_main {
   margin: 0 auto;
 }
@@ -119,22 +159,21 @@ nav{
   margin-right: auto;
   float: left;
   width: 47vw;
-  height: 300px;
+  height: 15em;
   }
 .header_title {
   margin-left: auto;
   margin-right: 3vw;
   float: right;
-  border: 5px;
   width: 15vw;
-  height: 300px;
+  height: 15em;
   background-color: $dark;
   position:relative;
   }
 h1.title {
   writing-mode:vertical-rl;
-  font-size: 5vw;
-  letter-spacing:-20px;
+  font-size: 4em;
+  letter-spacing:-0.2em;
   line-height: 1em;
   text-align: left;
   float: right;
@@ -142,7 +181,7 @@ h1.title {
   margin-left: 1vw;
   margin-right: 1vw;
   margin-top: 0;
-  margin-bottom: 3vw;
+  margin-bottom: 1em;
   }
 a.title {
   text-decoration: none;
@@ -156,15 +195,17 @@ a.title:hover {
 /*footer-----------------------------------*/
 
 .footer {
-  height: 100px;
+  margin-top: 2em;
+  height: auto;
   width: auto;
   text-align: center;
   background-color: $dark;
+  box-shadow: 1px 1px 1px 1px $dark;
 }
 
 .footer_text {
-  margin-top: 10px;
-  margin-bottom: -1vw;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .blogger {
@@ -210,14 +251,14 @@ a.title:hover {
 a.back_to_top {
   text-decoration: none;
   position: fixed;
-  bottom: 100px !important;
+  bottom: 4em !important;
   right: 5vw !important;
   background: $dark !important;
-  height: 40px;
-  width: 40px;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
-  line-height: 36px;
-  font-size: 18px;
+  line-height: 1.8em;
+  font-size: 0.7em;
   text-align: center;
   transition-duration: .5s;
   display: none;
@@ -236,66 +277,6 @@ a.back_to_top:hover span {
   color: #ffffff !important;
 }
 
-section.pager {
-  a.pre {
-  text-decoration: none;
-  position: fixed;
-  bottom: 100px !important;
-  right: 5vw !important;
-  background: $dark !important;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  line-height: 36px;
-  font-size: 18px;
-  text-align: center;
-  transition-duration: .5s;
-  display: none;
-  }
-
-  a.pre span {
-    color: #ffffff !important;
-  }
-
-  a.pre:hover {
-    cursor: pointer;
-    background: $red !important;
-  }
-
-  a.pre:hover span {
-    color: #ffffff !important;
-  }
-
-  a.next {
-    text-decoration: none;
-    position: fixed;
-    bottom: 100px !important;
-    right: 5vw !important;
-    background: $dark !important;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    line-height: 36px;
-    font-size: 18px;
-    text-align: center;
-    transition-duration: .5s;
-    display: none;
-  }
-
-  a.next span {
-    color: #ffffff !important;
-  }
-
-  a.next:hover {
-    cursor: pointer;
-    background: $red !important;
-  }
-
-  a.next:hover span {
-    color: #ffffff !important;
-  }
-
-}
 
 /* Posts ----------------------------------*/
 
@@ -306,16 +287,26 @@ span.md_line {
   text-indent: 2em;
   display: block
 }
+.labeltitle {
+  margin-left: 3vw;
+  margin-right: 2vw;
+  color: $words;
+}
 .post_title {
   border-left-style: solid;
   border-left-width: 1vw;
   border-left-color: $red;
+  padding-left: 1vw;
+  padding-right: 1vw;
   margin-left: 3vw;
   margin-right: 3vw;
 }
+.post_preview > .with_font {
+  height: 4.2em;
+}
 .post_title a {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .info {
   margin-left: 3vw;
@@ -331,11 +322,16 @@ span.md_line {
 .info span a:hover {
   color: $dark;
 }
+.info_item {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
 .content {
-  margin-top: 10px;
+  margin-top: 0.5em;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-bottom: 80px;
+  margin-bottom: 4em;
+  overflow: visible;
 }
 
 /*Comment---------------------------------*/
@@ -343,6 +339,33 @@ span.md_line {
 .doc_comments {
   margin-left: 3vw;
   margin-right: 3vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/*category-------------------------------*/
+
+.category_item {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 2em;
+}
+
+.category_item li{
+  display:inline;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.tag_item {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 2em;
+}
+
+.tag_item li{
+  display:inline;
+  margin-left: 2em;
+  margin-right: 2em;
 }

@@ -1,4 +1,4 @@
-$bgcolor: #e3e3e3;
+$bgcolor: #eaeaea;
 $dark: #383838;
 $light: #fbfbfb;
 $red: #ff5656;
@@ -44,7 +44,9 @@ pre code {
   border: none;
   background: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  white-space: pre-wrap;
+  }
    .md_block {
     margin-bottom: 2.2em; }
      .md_video,  .md_audio {
@@ -84,12 +86,12 @@ pre code {
                               margin: 0.4em 0; }
                                ul p,  ol p,  li p {
                                 margin: 0;
-                                overflow: visible; }
+                                }
                                  a img {
                                   border: none; }
 dl dt {
   float: left;
-  width: 180px;
+  width: 9em;
   overflow: hidden;
   clear: left;
   text-align: right;
@@ -98,7 +100,7 @@ dl dt {
   font-weight: bold;
   margin-bottom: 1em; }
    dl dd {
-    margin-left: 200px;
+    margin-left: 10em;
     margin-bottom: 1em; }
      hr {
       display: block;
@@ -114,14 +116,14 @@ dl dt {
         padding: 0 0 0 1.2em;
         border-left: 0.4em solid #ddd;
         color: #555;
-        min-height: 20px; }
+        min-height: 1em; }
          blockquote p {
           margin: 0.8em 0; }
            blockquote span.md_line {
             margin-bottom: 0.25em;
             margin-top: 0.25em; }
              blockquote ul {
-              padding: 0 15px; }
+              padding: 0 0.7em; }
                blockquote small {
                 display: inline-block;
                 margin: 0.8em 0 0.8em 1.5em;
@@ -131,6 +133,8 @@ dl dt {
   text-align: center; }
    .footnotes .md_line {
     display: inline !important; }
+    .footnotes .md_line ol{overflow: visible;}
+     display: inline !important; }
      .img_rt_90 {
       transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -286,7 +290,7 @@ dl dt {
      .todo_undone_item {
       color: #c85a57; }
        .linenos {
-        padding: 0 0 0 10px; }
+        padding: 0 0 0 0.5em; }
          .linenos pre {
           background: transparent;
           border: none;
@@ -456,7 +460,7 @@ dl dt {
                                                                                                                                                 color: #00688B; }
                                                                                                                                                  .codehilite .il {
                                                                                                                                                   color: #B452CD; }
-                                                                                                                                                  @media (max-width: 480px) {
+                                                                                                                                                  @media (max-width: 24em) {
                                                                                                                                                      code {
                                                                                                                                                       padding: 0;
                                                                                                                                                       margin: 0;   }

@@ -11,7 +11,7 @@ block content
     +font('hanazono')
       h2.post_title='分类'
       
-    ul: for category in posts.categories: li
+    ul.category_item: for category in posts.categories: li
       a(href=category.url)= category.title
       span= '（%s）' %category.posts_count
 
@@ -20,6 +20,6 @@ block content
     +font('hanazono')
       h2.post_title='标签'
       
-    ul: for tag_name, tag_count in site.tags: li
+    ul.tag_item: for tag_name, tag_count in site.tags: li
       a(href='/tag/{{tag_name}}')= tag_name
       span= '（%s）' %tag_count
