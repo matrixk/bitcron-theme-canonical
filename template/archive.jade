@@ -1,0 +1,17 @@
+extends base.jade
+
+block title
+	title= "归档 - " + site.title
+
+block content
+  
+  +font('hanazono')
+    h2.post_title='归档'
+  
+  entries = get_data(type='post', limit=40, sort='desc').group('-date:year')
+  .post_archive: for sub_title, posts in entries: .post-archive
+    h3.post_title= sub_title
+    ul.listing: for post in posts
+      li
+        span.content= post.date.format("%Y/%m/%d")
+        a(href=post.url, title=post.title).content= post.title

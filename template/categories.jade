@@ -1,0 +1,25 @@
+extends base.jade
+tag = request.url | replace('https://'+site.domain+'/tag/','')
+
+block title
+	title= "分类 - " + site.title
+
+block content
+  
+  #categories:.categories
+    
+    +font('hanazono')
+      h2.post_title='分类'
+      
+    ul.category_item: for category in posts.categories: li
+      a(href=category.url)= category.title
+      span= '（%s）' %category.posts_count
+
+  #tags:.tags
+
+    +font('hanazono')
+      h2.post_title='标签'
+      
+    ul.tag_item: for tag_name, tag_count in site.tags: li
+      a(href='/tag/{{tag_name}}')= tag_name
+      span= '（%s）' %tag_count
