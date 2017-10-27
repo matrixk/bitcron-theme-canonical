@@ -1,5 +1,8 @@
 extends base.jade
 
+block title
+	title= post.title + " - " + site.title
+
 block content
   article.post_article
     +font('hanazono')
@@ -27,8 +30,10 @@ block content
         span
           i.fa.fa-calendar
           span= post.date.format('%Y-%m-%d')
-
+          
+    //规定一个新的metadata“cancel_indent”，当值为True时，载入special_format以取消单篇文章的首行缩进
+    if post.metadata.cancel_indent
+        +h.load("/template/special_format.scss")
     .content= post.content
-      +font('hanazono')
   
   +post.comments_as_html()

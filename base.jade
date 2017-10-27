@@ -3,6 +3,7 @@ html
     +h.headers
     +load('font')
     +h.load("/template/style.scss")
+    +h.load("/template/markdown.scss")
     block title
       title= site.title
         
@@ -21,21 +22,22 @@ html
             .header_title
               +font('hanazono')
                 h1.title
-                  a(href='/')= site.title
+                  a(href='/').title= site.title
         block content
         
       .footer
-        .blogger
-          span.site_info= 'Copyright &copy '
-          span= site.now.year + '&nbsp;'
-            a(href="/")=site.title 
-        .designer
-          span.designer= 'Theme &nbsp;'
-            a(href="")「正则」
-          span.designer= '&nbsp; Designed by &nbsp;'
-            a(href="https://matrixk.me/", target="_blank")  矩阵良
-          span.designer= '&nbsp; Powered by &nbsp;'
-            a(href="https://www.bitcron.com/", target="_blank")  Bitcron
+        .footer_text
+          .blogger
+            span.site_info= 'Copyright &copy '
+            span= site.now.year + '&nbsp;'
+              a(href="/")=site.title 
+              .designer
+                span.designer= 'Theme &nbsp;'
+                  a(href="")「正则」
+                span.designer= '&nbsp; Designed by &nbsp;'
+                  a(href="https://matrixk.me/", target="_blank")  矩阵良
+                span.designer= '&nbsp; Powered by &nbsp;'
+                  a(href="https://www.bitcron.com/", target="_blank")  Bitcron
 
       .paginator
         +h.back_to_top(label="△")

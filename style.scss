@@ -1,0 +1,348 @@
+/*
+Theme Name: 正则
+Theme URI: https://matrixk.me/bitcron-theme-canonical
+Author: 矩阵良
+Author URI: https://matrixk.me/
+Special Thanks: 风海流、水八口
+MIT License: Copyright (c) 2017 矩阵良
+*/
+
+$bgcolor: #e3e3e3;
+$dark: #383838;
+$light: #fbfbfb;
+$red: #ff5656;
+$words: #3e3e3e;
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/*body----------------------------------------*/
+
+body {
+  font: normal 20px Arial, Helvetice, Verdana, sans-serif;
+  background-color: $bgcolor;
+  line-height: 2.0em;
+  margin: 0 auto;
+  padding: 50px 15% 50px 15%;
+  }
+ol, ul {
+  list-style: none;
+  color: $dark ;
+  }
+blockquote, q {
+  quotes: none;
+  }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+  }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+img{
+ width:auto;
+ height:auto;
+ max-width:100%;
+}
+div {
+  overflow:hidden
+}
+
+/*Navigator----------------------*/
+nav{
+  text-align: center;
+}
+
+
+/*Site Header--------------------*/
+
+.site {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-top: 50px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.description > .with_font {
+  margin-top: 0px;
+  margin-bottom: auto;
+  height: 2.4em;
+}
+.site_description {
+  font-size: 0.8em;
+  color: $words;
+  line-height: 1.4em;
+  display:table-cell;      /*按照单元格的样式显示元素*/
+  vertical-align:bottom;   /*底对齐*/
+}
+.site_main {
+  background-color: $light;
+  }
+.header_main {
+  margin: 0 auto;
+}
+.header_img {
+  margin-left: 3vw;
+  margin-right: auto;
+  float: left;
+  width: 47vw;
+  height: 300px;
+  }
+.header_title {
+  margin-left: auto;
+  margin-right: 3vw;
+  float: right;
+  border: 5px;
+  width: 15vw;
+  height: 300px;
+  background-color: $dark;
+  position:relative;
+  }
+h1.title {
+  writing-mode:vertical-rl;
+  font-size: 5vw;
+  letter-spacing:-20px;
+  line-height: 1em;
+  text-align: left;
+  float: right;
+  position: absolute;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 0;
+  margin-bottom: 3vw;
+  }
+a.title {
+  text-decoration: none;
+  color: $light;
+}
+a.title:hover {
+  text-decoration: none;
+  color: $red;
+}
+
+/*footer-----------------------------------*/
+
+.footer {
+  height: 100px;
+  width: auto;
+  text-align: center;
+  background-color: $dark;
+}
+
+.footer_text {
+  margin-top: 10px;
+  margin-bottom: -1vw;
+}
+
+.blogger {
+  margin-bottom: 0;
+}
+
+.blogger span {
+  color: #8d8d8d;
+}
+
+.blogger span a{
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.blogger span a:hover{
+  text-decoration: none;
+  color: $light;
+}
+
+.designer {
+  margin-top: 0;
+}
+
+.designer span {
+  color: #8d8d8d;
+}
+
+.designer span a{
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.designer span a:hover{
+  text-decoration: none;
+  color: $light;
+}
+
+
+
+/* Pager ----------------------------------*/
+
+a.back_to_top {
+  text-decoration: none;
+  position: fixed;
+  bottom: 100px !important;
+  right: 5vw !important;
+  background: $dark !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: center;
+  transition-duration: .5s;
+  display: none;
+}
+
+a.back_to_top span {
+  color: #ffffff !important;
+}
+
+a.back_to_top:hover {
+  cursor: pointer;
+  background: $red !important;
+}
+
+a.back_to_top:hover span {
+  color: #ffffff !important;
+}
+
+section.pager {
+  a.pre {
+  text-decoration: none;
+  position: fixed;
+  bottom: 100px !important;
+  right: 5vw !important;
+  background: $dark !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: center;
+  transition-duration: .5s;
+  display: none;
+  }
+
+  a.pre span {
+    color: #ffffff !important;
+  }
+
+  a.pre:hover {
+    cursor: pointer;
+    background: $red !important;
+  }
+
+  a.pre:hover span {
+    color: #ffffff !important;
+  }
+
+  a.next {
+    text-decoration: none;
+    position: fixed;
+    bottom: 100px !important;
+    right: 5vw !important;
+    background: $dark !important;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    display: none;
+  }
+
+  a.next span {
+    color: #ffffff !important;
+  }
+
+  a.next:hover {
+    cursor: pointer;
+    background: $red !important;
+  }
+
+  a.next:hover span {
+    color: #ffffff !important;
+  }
+
+}
+
+/* Posts ----------------------------------*/
+
+pre {
+  white-space: pre-wrap
+}
+span.md_line {
+  text-indent: 2em;
+  display: block
+}
+.post_title {
+  border-left-style: solid;
+  border-left-width: 1vw;
+  border-left-color: $red;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.post_title a {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.info {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  text-align: right;
+}
+.info span {
+  color: #6d6d6d;
+}
+.info a {
+  color: #6d6d6d;
+}
+.info span a:hover {
+  color: $dark;
+}
+.content {
+  margin-top: 10px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 80px;
+}
+
+/*Comment---------------------------------*/
+
+.doc_comments {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

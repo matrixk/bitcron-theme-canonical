@@ -1,5 +1,15 @@
 extends base.jade
 
+block title
+	if request.path.startswith('/tag/') and posts.tags
+		title= '标签：' + tag + ' - ' + site.title
+	elif request.path.startswith('/category/') and posts.category
+		title= '分类：' + posts.category.title + ' - ' + site.title
+	elif request.args.s
+		title= '搜索：' + request.args.s + ' - ' + site.title
+	else
+		title= site.title
+
 block content
   if request.path.startswith('/tag/') and posts.tags
     .labeltitle= '标签「%s」下的文章' %posts.tags.join("+")
@@ -39,4 +49,4 @@ block content
             span
               i.fa.fa-calendar
               span= post.date.format('%Y-%m-%d')
-        .content= post.content.limit(150).no_pic.plain
+        .content= post.content.limit(300).no_pic.plain

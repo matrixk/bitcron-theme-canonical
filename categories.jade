@@ -1,6 +1,9 @@
 extends base.jade
 tag = request.url | replace('https://'+site.domain+'/tag/','')
 
+block title
+	title= "分类 - " + site.title
+
 block content
   
   #categories:.categories
