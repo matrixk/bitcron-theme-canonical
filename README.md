@@ -1,6 +1,6 @@
 # Bitcron 主题 「正则」
 
-> **注意：**这个模板还没有做移动端适配……我会抽空做的Orz
+> **注意：** 这个模板还没有做移动端适配……我会抽空做的Orz
 
 ~~因为作者是一个Standard用户所以没有多余的网站数量来建demo站了，大家将就看一下图算了哈。~~
 
@@ -18,6 +18,13 @@
 | 说明 | [这里](https://matrixk.me/post/zi-zhi/bitcron-theme-canonical) |
 | 源码 | [这里](https://github.com/matrixk/bitcron-theme-canonical) |
 | 属性 | 开源免费（反正感觉也并没有人想用……） |
+
+## 使用方法
+
+在[Github](https://github.com/matrixk/bitcron-theme-canonical)上下载源代码，然后把`template`放到你的根目录下就好了～
+
+如果根目录下已有`template`文件夹，请直接覆盖ww
+
 
 # 一些说明
 
@@ -45,7 +52,7 @@ status: public
 ---
 ```
 
-**注意：**为了实现这个功能我把一般文章的缩进写死了，为2em，如果平时不需要缩进的，在`markdown.scss`里找一下`span.md_line`的部分，改成自己平时的缩进就好了。
+**注意：** 为了实现这个功能我把一般文章的缩进写死了，为2em，如果平时不需要缩进的，在`markdown.scss`里找一下`span.md_line`的部分，改成自己平时的缩进就好了。
 
 ## 关于博客头图
 
