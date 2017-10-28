@@ -250,18 +250,19 @@ a.back_to_top:hover span {
 }
 
 .paginator.pager.pagination, .paginator_container.pagination_container {
+  direction: rtl;
   position: fixed;
   float: right;
   bottom: 2em !important;
   right: 5vw !important;
-  height: 2.5em;
-  width: 5.3em;
 }
 
 .posme {
   height: 2.5em;
   width: 0;
 	a {
+    float: left;
+    margin-left: 5px;
 		display: inline-block;
     border-left: 3em;
     border-radius: 100%;
@@ -482,4 +483,62 @@ span.md_line {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+/* Responsive ----------------------------------*/
+@media only screen and (max-width : 600px) {
+  body {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    background-color:$dark;
+  }
+  aside .sidebar {
+    width: 100%;
+        float: none;
+    }
+    .nav{
+        margin-bottom: 0;
+	    box-shadow: none;
+     }
+  .header_img {
+  margin: 0 3vw 0 3vw;
+  width: 94%;
+  height: 10em;
+  }
+  .header_title {
+  margin: 0 3vw 0 3vw;
+  width:94%;
+  height: 3.5em;
+  background-color: $bgcolor;
+  }
+  h1.title {
+  border-style: none;
+  color: $dark;
+  writing-mode:lr;
+  font-size: 2.6em;
+  line-height: 1em;
+  letter-spacing:0em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  }
+  a.title {
+  text-decoration: none;
+  color: $dark;
+  }
+  a.title:hover {
+  text-decoration: none;
+  color: $red;
+  }
+  .site_main {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $light;
+  box-shadow: none;
+  }
+  .info span {
+	font-size:small;
+  }
+  .footer {
+  box-shadow: none;
+  margin-top: 0;
+  }
 }

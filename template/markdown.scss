@@ -33,26 +33,26 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 
 /*Reset Markdown CSS----------------------*/
 
 img{
-	 width:auto;
-	 height:auto;
-	 max-width:100%;
+     width:auto;
+     height:auto;
+     max-width:100%;
 }
 
 p span {
@@ -74,12 +74,12 @@ p span {
 }
 
 strong, b {
-	 color: $red;
-	 font-weight: bold;
+     color: $red;
+     font-weight: bold;
  }
 
 em, italic {
-	 font-style: italic;
+     font-style: italic;
  }
 
 ul {
@@ -174,15 +174,15 @@ dl dt {
    background-color: #fff;
    min-height: 1em;
    &::before {
-  	 color: #ddd;
-  	 content: "\201C";
-  	 font-size: 20em;
+       color: #ddd;
+       content: "\201C";
+       font-size: 20em;
        padding-top: 0.2em;
        margin-left: -0.32em;
        position: absolute;
-  	 line-height: 0;
-  	}
-	}
+       line-height: 0;
+      }
+    }
  blockquote p {
  margin: 0.8em 0; }
  blockquote span.md_line {
@@ -271,12 +271,12 @@ dl dt {
   border-radius: 5px;
   border: 1px solid #e6e6e6;
   margin: 0 3vw 0 3vw;
-	float: right;
+    float: right;
   padding: 0 1em;
 }
    .toc ul {
     padding: 5px 42px;
-	}
+    }
      .toc ul li {
       padding: 0;
       margin: 0; }
@@ -286,11 +286,11 @@ dl dt {
   .toc a {
     text-decoration: none;
     color: $dark;
-	}
-	.toc a:hover {
-		color: $red;
-		text-shadow:1px 1px 2px #969696;
-	}
+    }
+    .toc a:hover {
+        color: $red;
+        text-shadow:1px 1px 2px #969696;
+    }
 
 /*comment------------------------*/
 
@@ -313,17 +313,17 @@ dl dt {
 /*code highlight-----------------*/
 
 code, tt {
-	padding: 1px 3px;
-	font-family: Inconsolata, monospace, sans-serif;
-	white-space: pre-wrap;
-	border: 1px solid #E3EDF3;
-	background: #f7f7f9;
-	color: #222;
-	border-radius: 2px; }
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    white-space: pre-wrap;
+    border: 1px solid #E3EDF3;
+    background: #f7f7f9;
+    color: #222;
+    border-radius: 2px; }
 code {
-	word-wrap: break-word;
-	white-space: pre-wrap
-	}
+    word-wrap: break-word;
+    white-space: pre-wrap
+    }
 pre {
    -moz-box-sizing: border-box;
    box-sizing: border-box;
@@ -389,9 +389,19 @@ pre {
   margin-bottom: 0.6em;
   display: block;
   line-height: 1.75; }
-	a.md_compiled {
-	  font-weight: bold;
-	}
+    span.md_line_dom_embed {
+        padding:0 0 0 0;
+    }
+    a.md_compiled {
+      font-weight: bold;
+    }
+    img.md_compiled {
+        max-width: 100%;
+        text-indent: 0;
+        overflow: hidden;
+      margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
   .md_line br {
   display: none; }
   .codehilite .hll {
@@ -548,4 +558,4 @@ pre {
                    code {
                    padding: 0;
                    margin: 0; }
-								 }
+                                 }
