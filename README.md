@@ -43,13 +43,11 @@
 要取消的时候写成这样：
 
 ```
----
 date: 2017-10-28 12:57:59
 tags: tag1 tag2
 title: 【论坛体】title
 cancel_indent: True
 status: public
----
 ```
 
 **注意：** 为了实现这个功能我把一般文章的缩进写死了，为2em，如果平时不需要缩进的，在`markdown.scss`里找一下`span.md_line`的部分，改成自己平时的缩进就好了。
