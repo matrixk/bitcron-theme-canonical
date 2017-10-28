@@ -12,13 +12,12 @@
 
 ![](./bitcron-theme-canonical-02.png)
 
-```table
 | 名称 | 链接 |
+|:--- |:---|
 | 主题 | 正则 |
 | 说明 | [这里](https://matrixk.me/post/zi-zhi/bitcron-theme-canonical) |
 | 源码 | [这里](https://github.com/matrixk/bitcron-theme-canonical) |
 | 属性 | 开源免费（反正感觉也并没有人想用……） |
-```
 
 # 一些说明
 
