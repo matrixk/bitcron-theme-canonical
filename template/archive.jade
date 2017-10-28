@@ -13,5 +13,5 @@ block content
     h3.post_title= sub_title
     ul.listing: for post in posts
       li
-        span.content= post.date.format("%Y/%m/%d")
-        a(href=post.url, title=post.title).content= post.title
+        span.content.date= post.date.format("%m-%d")
+        a(href=post.url, title=post.title).content.arlist= post.title

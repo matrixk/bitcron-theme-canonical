@@ -8,38 +8,61 @@ html
       title= site.title
         
     body
-      .nav
-        +site.just_nav
+      nav.animated.fadeInDown
+        .nav
+          +site.just_nav
+          
+      main.animated.fadeInDown
+        .site_main
+          header.siteheader
+            .description
+              +font('noto-1')
+                span.site_description= site.configs.sub_title
+            .header_main
+              .header_img
+                if site.background_image 
+                  img(src=site.background_image, alt="header_image")
+                else
+                  img(src="/template/images/header.png", alt="header_image")
+              .header_title
+                +font('hanazono')
+                  h1.title
+                    a(href='/').title= site.title
+          block content
       
-      .site_main
-        header.siteheader
-          .description
-            +font('noto-1')
-              span.site_description= site.configs.sub_title
-          .header_main
-            .header_img
-              img(src=site.background_image, alt="header_image")
-            .header_title
-              +font('hanazono')
-                h1.title
-                  a(href='/').title= site.title
-        block content
-        
-      .footer
-        .footer_text
-          .blogger
-            span.site_info= 'Copyright &copy '
-            span= site.now.year + '&nbsp;'
-              a(href="/")=site.title 
-              .designer
-                span.designer= 'Theme &nbsp;'
-                  a(href="https://github.com/matrixk/bitcron-theme-canonical", target="_blank")「正则」
-                span.designer= '&nbsp; Designed by &nbsp;'
-                  a(href="https://matrixk.me/", target="_blank")  矩阵良
-                span.designer= '&nbsp; Powered by &nbsp;'
-                  a(href="https://www.bitcron.com/", target="_blank")  Bitcron
+      footer.animated.fadeInDown  
+        .footer
+          .footer_text
+            .blogger
+              span.site_info= 'Copyright &copy '
+              span= site.now.year + '&nbsp;'
+                a(href="/")=site.title 
+            .designer
+              span.designer= 'Theme &nbsp;'
+                a(href="https://github.com/matrixk/bitcron-theme-canonical", target="_blank")「正则」
+              span.designer= '&nbsp; Designed by &nbsp;'
+                a(href="https://matrixk.me/", target="_blank")  矩阵良
+              span.designer= '&nbsp; Powered by &nbsp;'
+                a(href="https://www.bitcron.com/", target="_blank")  Bitcron
 
       .paginator
         +h.back_to_top(label="△")
         .posme
           +h.paginator(pre_label="◁",  next_label="▷")
+
+      script
+        // smooth scrolling
+        $(function() {
+        	$('a[href*=#]:not([href=#])').click(function() {
+        		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        			var target = $(this.hash);
+        			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        			if (target.length) {
+        				$('html,body').animate({
+        					scrollTop: target.offset().top-44
+        				}, 500);
+        				return false;
+        			}
+        		}
+        	});
+        });
