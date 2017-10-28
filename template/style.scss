@@ -48,15 +48,21 @@ div {
   background-color: $dark;
   }
 
+.bitcron_nav_container ul {
+  margin: auto 0 auto 0;
+  padding: 0 0 0 0;
+}
+
 .bitcron_nav_container li {
   display: inline-block;
   list-style:none;
-  font-size: 1.2em;
   margin-left: 1.2em;
   margin-right: 1.2em;
+  font-size: 1.2em;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+  line-height: 3em;
   color: $light;
   }
 
