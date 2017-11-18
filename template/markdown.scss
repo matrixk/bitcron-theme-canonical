@@ -58,11 +58,12 @@ img{
 p span {
  color: $words !important;
  line-height: auto;
- word-break: break-all; }
+ word-break: normal; }
  .md_video, .md_audio {
  max-width: 100%; }
  .md_line {
  margin-top: 0;
+ letter-spacing: 0.1em;
  margin-bottom: 0.85em; }
  a {
  color: $dark;
@@ -106,7 +107,7 @@ sub {
 }
 
  .md_block {
- margin-bottom: 2.2em; }
+ margin-bottom: 0; }
  .md_video, .md_audio {
  max-width: 100%; }
  .x2_image {
@@ -168,7 +169,7 @@ dl dt {
    -moz-box-sizing: border-box;
    box-sizing: border-box;
    margin: 3em 3vw;
-   padding: 2em 2em 0 2em;
+   padding: 2em;
    border: 0.4em solid #ddd;
    border-width: 1px;
    background-color: #fff;
@@ -187,7 +188,9 @@ dl dt {
  margin: 0.8em 0; }
  blockquote span.md_line {
  margin-bottom: 0.25em;
- margin-top: 0.25em; }
+ margin-top: 0.25em; 
+ text-indent: 0;
+ }
  blockquote ul {
  padding: 0 0.7em; }
  blockquote small {
