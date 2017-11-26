@@ -1,0 +1,19 @@
+html
+    head
+    +h.headers
+    +load('font')
+    +h.load("/template/show/forum.scss")
+	if post.metadata.cancel_indent
+        +h.load("/template/special_format.scss")
+    block title
+      title= post.title + " - " + site.title
+        
+body
+  .head_forum
+      span.head_info="Written by "
+        a.head_info(href="/")="矩阵良"
+	  span.head_info="|"
+      span.head_info="你现在看到的是一个论坛体的页面"
+  main
+    .forum_content= post.content
+	+post.comments_as_html()

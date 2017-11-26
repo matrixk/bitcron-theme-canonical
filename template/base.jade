@@ -30,19 +30,21 @@ html
                     a(href='/').title= site.title
           block content
       
-      footer
+      footer.animated.fadeInDown  
         .footer
           .footer_text
             .blogger
-              span.site_info= 'Copyright &copy '
-              span= site.now.year + '&nbsp;'
+              span= 'Copyright © '
+              span= site.now.year + ' '
                 a(href="/")=site.title 
+              span= '| 全站共%s篇文章' %(d.get_data(types='post', return_count=true, with_page=false))
+              span= '%s字' %site.text_words
             .designer
-              span.designer= 'Theme &nbsp;'
+              span= 'Theme  '
                 a(href="https://github.com/matrixk/bitcron-theme-canonical", target="_blank")「正则」
-              span.designer= '&nbsp; Designed by &nbsp;'
+              span= '  Designed by  '
                 a(href="https://matrixk.me/", target="_blank")  矩阵良
-              span.designer= '&nbsp; Powered by &nbsp;'
+              span= '  Powered by  '
                 a(href="https://www.bitcron.com/", target="_blank")  Bitcron
 
       .paginator
@@ -50,4 +52,19 @@ html
         .posme
           +h.paginator(pre_label="◁",  next_label="▷")
 
-
+      script
+        // smooth scrolling
+        $(function() {
+        	$('a[href*=#]:not([href=#])').click(function() {
+        		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        			var target = $(this.hash);
+        			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        			if (target.length) {
+        				$('html,body').animate({
+        					scrollTop: target.offset().top-44
+        				}, 500);
+        				return false;
+        			}
+        		}
+        	});
+        });

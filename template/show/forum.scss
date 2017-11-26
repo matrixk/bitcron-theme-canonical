@@ -1,0 +1,87 @@
+body {
+    line-height: 2.2em;
+    font-family: inherit;
+}
+
+hr {
+    margin: 2em 0;
+    color: lightgrey;
+}
+
+
+blockquote {
+    border-left: 3px solid lightgrey;
+    margin: 0;
+    padding-left: 1em;
+    color: #555;
+}
+
+a {
+    color: #499eff;
+    text-decoration: none;
+}
+
+ol {
+    padding: 0em 1em;
+    color: #499eff;
+}
+
+.head_forum {
+    margin: 2.5em auto;
+    max-width: 900px;
+    text-align: center;
+    color: lightgrey;
+}
+
+a.head_info {
+    text-decoration: none;
+    color: lightslategrey;
+}
+
+.button {
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+    color: cornflowerblue;
+    background-color: #f7f7f9;
+    border: 1px solid #E3EDF3;
+    border-radius: 2px;
+}
+
+.forum_notes {
+  color: lightslategrey;
+}
+
+.forum_content {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+h1#toc_0 {
+    font-size: 1.5em;
+    background-color: lightgray;
+}
+
+h2 {
+    display: inline-block;
+    max-width: 5em;
+    margin: 0;
+}
+
+h3 {
+    display: inline-block;
+    margin: 0 0 0 0.5em;
+}
+
+code {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #eaeaea;
+    padding: 0.1em;
+}
+
+.doc_comments {
+    padding: 35px 0 45px;
+    max-width: 900px;
+    margin: 2em auto;
+    border-top: 1px solid lightgrey;
+}

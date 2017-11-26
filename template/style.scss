@@ -175,6 +175,7 @@ a.title:hover {
 .footer_text {
   margin-top: 0.7em;
   margin-bottom: 0.7em;
+  font-size: 0.8em;
 }
 
 .blogger {
@@ -182,13 +183,11 @@ a.title:hover {
 }
 
 .blogger span {
-  font-size: 0.9em;
   color: #8d8d8d;
 }
 
 .blogger span a{
   text-decoration: none;
-  font-size: 0.9em;
   color: #8d8d8d;
 }
 
@@ -202,13 +201,11 @@ a.title:hover {
 }
 
 .designer span {
-  font-size: 0.9em;
   color: #8d8d8d;
 }
 
 .designer span a{
   text-decoration: none;
-  font-size: 0.9em;
   color: #8d8d8d;
 }
 
@@ -383,6 +380,11 @@ span.md_line {
   margin-bottom: auto;
 }
 
+.archive_list {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .tags {
   margin-top: auto;
   margin-bottom: 5em;
@@ -401,21 +403,30 @@ span.md_line {
   margin: 0 auto;
 }
 
-.tag_item {
+.archive_list_item {
   margin-left: 3vw;
   margin-right: 3vw;
   margin-bottom: 2em;
 }
 
-.tag_item li{
+.archive_list_item li{
   display:inline-block;
   width: 9em;
   text-align: left;
   margin: 0 auto;
 }
 
-.post_archive {
-  margin-bottom: 5em;
+.tag_item {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 2em;
+}
+
+.tag_item li {
+    display: inline-block;
+    width: 15em;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .listing {
@@ -428,7 +439,7 @@ span.md_line {
 }
 
 .post_archive {
-  margin: 0 3vw 5em 3vw;
+  margin: 0 5vw 5em 5vw;
 }
 
 .content.date {
@@ -506,6 +517,18 @@ span.md_line {
   width: 94%;
   height: 10em;
   }
+  .bitcron_nav_container li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 3em;
+    color: #fbfbfb;
+  }
   .header_title {
   margin: 0 3vw 0 3vw;
   width:94%;
@@ -529,17 +552,51 @@ span.md_line {
   text-decoration: none;
   color: $red;
   }
+  .siteheader {
+    margin-top: 3em;
+    margin-bottom: 1.3em;
+  }
   .site_main {
   margin-top: 0;
   margin-bottom: 0;
   background-color: $light;
   box-shadow: none;
   }
+  .info {
+    text-align: inherit;
+    margin: 0 5vw;
+    padding: 0;
+    line-height: 1.2em;
+  }
   .info span {
 	font-size:small;
   }
   .footer {
-  box-shadow: none;
-  margin-top: 0;
+    margin-top: auto;
+    text-align: center;
+    background-color: #383838;
+    box-shadow: none;
+  }
+  .footer_text {
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    font-size: 0.8em;
+    line-height: 1.7em;
+  }
+  .designer {
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 1em 0 1em 0;
+  }
+  .post_title {
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-left-color: #ff5656;
+    padding-left: 3vw;
+    padding-right: 1vw;
+    margin: 1em 5vw;
   }
 }

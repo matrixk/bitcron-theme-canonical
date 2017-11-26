@@ -1,17 +1,19 @@
 extends base.jade
 
 block title
-	title= "归档 - " + site.title
+  title= '归档：'+request.path.split('/')[-1]+'年 - ' + site.title
 
 block content
+  if request.path.strip('/')=='archive'
+    +response.redirect('/categories')
   
   +font('hanazono')
-    h2.post_title='归档'
-  
-  entries = get_data(type='post', limit=40, sort='desc').group('-date:year')
-  .post_archive: for sub_title, posts in entries: .post-archive
-    h3.post_title= sub_title
-    ul.listing: for post in posts
-      li
-        span.content.date= post.date.format("%m-%d")
-        a(href=post.url, title=post.title).content.arlist= post.title
+    h2.post_title=request.path.split('/')[-1]
+
+  year_start_date = '%s-1-1'%request.path.split('/')[-1]
+  year_end_date = '%s-1-1'%(request.path.split('/')[-1].int+1)
+
+  year_posts = d.get_data(types='post', limit=300, sort='desc', date_start=year_start_date, date_end=year_end_date)
+  .post_archive: for post in year_posts: .post-archive
+      span.content.date= post.date.format("%m-%d")
+      a(href=post.url, title=post.title).content.arlist= post.title
