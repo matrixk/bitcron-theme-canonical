@@ -24,13 +24,13 @@ footer, header, hgroup, menu, nav, section {
 /*body----------------------------------------*/
 
 body {
-  font: normal 1em Arial, Helvetice, Verdana, sans-serif;
-  background-color: $bgcolor;
-  line-height: 1.8em;
-  margin: 0 auto;
-  font-size: 1.14em;
-  padding: 5em 20% 5em 20%;
-  }
+    font: normal 1em Arial, Helvetice, Verdana, sans-serif;
+    background-color: #eaeaea;
+    line-height: 1.8em;
+    margin: 3em auto;
+    font-size: 1.14em;
+    max-width: 900px;
+}
 
 div {
   overflow:hidden
@@ -69,6 +69,7 @@ div {
 
 .bitcron_nav_container li a {
   text-align: center;
+  letter-spacing: 0.2em;
   color: $light;
   }
 
@@ -83,7 +84,7 @@ header {position: relative}
 header:before, header:after {
   content: ' ';
   position: absolute;
-  left: 3vw; right: 3vw;
+  left: 35px; right: 35px;
   background-image:url(/template/images/separate.png)
 }
 
@@ -103,8 +104,8 @@ header:after {bottom: -20px; top: calc(100% + 12px)}
   }
 .description {
   margin-top: auto;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 .description > .with_font {
   margin-top: auto;
@@ -120,37 +121,32 @@ header:after {bottom: -20px; top: calc(100% + 12px)}
 }
 
 .header_main {
-  margin: 0 auto;
+    margin: 0 35px;
+    background: #383838;
 }
 .header_img {
-  margin-left: 3vw;
-  margin-right: auto;
-  float: left;
-  width: 42vw;
-  height: 15em;
-  }
+    margin-right: auto;
+    float: left;
+    max-width: 670px;
+    height: 15em;
+}
 .header_title {
-  margin-left: auto;
-  margin-right: 3vw;
-  float: right;
-  width: 11vw;
-  height: 15em;
-  background-color: $dark;
-  position:relative;
-  }
+    margin-left: auto;
+    height: 15em;
+    position: relative;
+}
+
 h1.title {
-  border-style: none;
-  writing-mode:vertical-rl;
-  font-size: 4.2em;
-  letter-spacing:-0.2em;
-  line-height: 1em;
-  text-align: left;
-  float: right;
-  position: absolute;
-  margin-left: 1vw;
-  margin-right: 2vw;
-  margin-top: 0;
-  margin-bottom: 1em;
+    border-style: none;
+    writing-mode:vertical-rl;
+    font-size: 4.2em;
+    letter-spacing:-0.2em;
+    line-height: 1em;
+    text-align: left;
+    float: right;
+    position: absolute;
+    margin: 0 10px;
+    padding: 0;
   }
 a.title {
   text-decoration: none;
@@ -222,7 +218,7 @@ a.back_to_top {
   text-decoration: none;
   position: fixed;
   bottom: 4.85em !important;
-  right: 5vw !important;
+  right: 55px !important;
   background: $dark !important;
   height: 2.5em !important;
   width: 2.5em !important;
@@ -252,7 +248,7 @@ a.back_to_top:hover span {
   position: fixed;
   float: right;
   bottom: 2em !important;
-  right: 5vw !important;
+  right: 55px !important;
 }
 
 .posme {
@@ -283,7 +279,7 @@ a.pre_post, span.pre_post {
     float: left;
     text-align: left;
     width: 40%;
-    padding-left: 2vw;
+    padding-left: 22px;
     background-color: $bgcolor;
     &::before {
         content: "\2039";
@@ -297,7 +293,7 @@ a.next_post, span.next_post {
     float: right;
     text-align: right;
     width: 40%;
-    padding-right: 2vw;
+    padding-right: 22px;
     background-color: $bgcolor;
     &::after {
         content: "\203A";
@@ -315,18 +311,20 @@ span.md_line {
   display: block
 }
 .labeltitle {
-  margin-left: 3vw;
-  margin-right: 2vw;
+  margin-left: 35px;
+  margin-right: 22px;
   color: $words;
 }
 .post_title {
   border-left-style: solid;
   border-left-width: 8px;
   border-left-color: $red;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 35px;
+}
+.post_preview {
+    margin-bottom: 3em;
 }
 .post_preview > .with_font {
   height: auto;
@@ -336,9 +334,8 @@ span.md_line {
   margin-right: auto;
 }
 .info {
-  margin-left: 3vw;
-  margin-right: 3vw;
-  text-align: right;
+    text-align: right;
+    margin: 1em 55px;
 }
 .info span {
   color: #6d6d6d;
@@ -353,21 +350,23 @@ span.md_line {
   margin-left: 0.2em;
   margin-right: 0.2em;
 }
+.info_detail {
+    display: inline-block;
+    margin: 0 0.5em;
+}
 .content {
-  color: $words;
-  margin-top: 0.5em;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 4em;
-  overflow: visible;
+    color: #404040;
+    margin-top: 0;
+    margin:auto 55px;
+    overflow: visible;
 }
 
 
 /*Comment---------------------------------*/
 
 .doc_comments {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 35px;
+  margin-right: 35px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -404,8 +403,8 @@ span.md_line {
 }
 
 .category_item {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 35px;
+  margin-right: 35px;
   margin-bottom: 2em;
 }
 
@@ -417,8 +416,8 @@ span.md_line {
 }
 
 .archive_list_item {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 35px;
+  margin-right: 35px;
   margin-bottom: 2em;
 }
 
@@ -430,8 +429,8 @@ span.md_line {
 }
 
 .tag_item {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 35px;
+  margin-right: 35px;
   margin-bottom: 2em;
 }
 
@@ -452,19 +451,19 @@ span.md_line {
 }
 
 .post_archive {
-  margin: 0 5vw 5em 5vw;
+  margin: 1.5em 55px 5em 55px;
 }
 
 .content.date {
   width: 5em;
   font-weight: bold;
   display:table-cell ;
-  margin: 0 1vw 0 0;
+  margin: 0 10px 0 0;
 }
 
 .content.arlist {
   display:table-cell ;
-  margin: 0 0 0 1vw;
+  margin: 0 0 0 10px;
 }
 
 
@@ -511,7 +510,7 @@ span.md_line {
 }
 
 /* Responsive ----------------------------------*/
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 830px) {
   body {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
@@ -525,37 +524,38 @@ span.md_line {
         margin-bottom: 0;
 	    box-shadow: none;
      }
+  .header_main {
+    margin: 0 35px;
+    background: none;
+  }
   .header_img {
-  margin: 0 3vw 0 3vw;
-  width: 94%;
-  height: 10em;
+    margin: 0;
+    max-height: 10em;
   }
   .bitcron_nav_container li {
     display: inline-block;
     list-style: none;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
     font-size: 1em;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 0.5em;
     text-align: center;
     line-height: 3em;
     color: #fbfbfb;
   }
   .header_title {
-  margin: 0 3vw 0 3vw;
-  width:94%;
-  height: 3.5em;
-  background-color: $bgcolor;
+    margin: 0;
+    height: 3.5em;
+    background-color: #f2f2f2;
+    display: block;
+    width: -webkit-fill-available;
   }
   h1.title {
   border-style: none;
   color: $dark;
   writing-mode:lr;
   font-size: 2.6em;
-  line-height: 1em;
   letter-spacing:0em;
-  margin: 0.2em 0.2em 0.2em 0.2em;
+  margin: 0 10px;
+  line-height: 1.3em;
   }
   a.title {
   text-decoration: none;
@@ -567,7 +567,7 @@ span.md_line {
   }
   .siteheader {
     margin-top: 3em;
-    margin-bottom: 1.3em;
+    margin-bottom: 3em;
   }
   .site_main {
   margin-top: 0;
@@ -577,7 +577,7 @@ span.md_line {
   }
   .info {
     text-align: inherit;
-    margin: 0 5vw;
+    margin: 1em 35px;
     padding: 0;
     line-height: 1.2em;
   }
@@ -585,10 +585,8 @@ span.md_line {
 	font-size:small;
   }
   .footer {
-    margin-top: auto;
-    text-align: center;
-    background-color: #383838;
-    box-shadow: none;
+	margin-top: auto;
+	box-shadow: none
   }
   .footer_text {
     margin-top: 0.7em;
@@ -608,13 +606,17 @@ span.md_line {
     border-left-style: solid;
     border-left-width: 8px;
     border-left-color: #ff5656;
-    padding-left: 3vw;
-    padding-right: 1vw;
-    margin: 1em 5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 35px;
   }
   .doc_comments .comments .sub_comments {
     padding-left: 0;
     padding: 0;
+  }
+
+  .content {
+    margin: auto 35px;
   }
   ul.sub_comments {
     margin-left: 0 !important;
@@ -635,5 +637,4 @@ span.md_line {
     border-radius: 5px;
     word-break: break-word;
   }
-
 }

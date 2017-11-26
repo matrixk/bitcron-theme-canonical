@@ -5,37 +5,41 @@ elif post.metadata.genre in ['forum']
 else
     extends base.jade
 
-	block title
-		title= post.title + " - " + site.title
+    block title
+      title= post.title + " - " + site.title
 
-	block content
- 	 article.post_article
-	    +font('hanazono')
-    	  h2.post_title
-        	a(href=post.url, target="_blank")= post.title
-   	 +font('noto-1')
-    	  ul.info
-        	if post.category: span
-    	      i.fa.fa-book
-        	  a(href=post.category.url).info_item= post.category.title
-        	  span='   '
-       	 if post.tags: span
-        	  i.fa.fa-tags
- 	         for tag in post.tags
- 	           a.tag(href='/tag/{{tag}}').info_item= tag
- 	         span='   '
-  	      span
-   	       i.fa.fa-file-text-o
-   	       span.info_item= ('{0:,}'.format(post.text_words or 0)) + '字'
-    	      span= '   '
-   	     span
-   	       i.fa.fa-comments-o
-    	      span.info_item= ('{0:,}'.format(post.comments_count or 0)) + '条评论'
-  	        span='   '
-   	     span
-   	       i.fa.fa-calendar
-   	       span.info_item= post.date.format('%Y-%m-%d')
-          
+    block content
+      article.post_article
+        +font('hanazono')
+          h2.post_title
+            a(href=post.url, target="_blank")= post.title
+        +font('noto-1')
+          ul.info
+            if post.category: span.info_detail
+              i.fa.fa-book
+              a(href=post.category.url)= post.category.title
+              
+            if post.tags: span.info_detail
+      				i.fa.fa-tags
+    					for tag in post.tags
+    						a.tag(href='/tag/{{tag}}')= tag
+              
+            span.info_detail
+      				i.fa.fa-file-text-o
+        			span= ('{0:,}'.format(post.text_words or 0)) + '字'
+              
+            span.info_detail
+              i.fa.fa-heart
+              span='%s次阅读' %(post.visits or 0)
+              
+            span.info_detail
+              i.fa.fa-comments-o
+              span= ('{0:,}'.format(post.comments_count or 0)) + '条评论'
+              
+            span.info_detail
+              i.fa.fa-calendar
+              span= post.date.format('%Y-%m-%d')
+
 	    //规定一个新的metadata“cancel_indent”，当值为True时，载入special_format以取消单篇文章的首行缩进
  	   if post.metadata.cancel_indent
    	     +h.load("/template/special_format.scss")
