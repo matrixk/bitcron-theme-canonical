@@ -606,10 +606,37 @@ span.md_line {
   }
   .post_title {
     border-left-style: solid;
-    border-left-width: 3px;
+    border-left-width: 8px;
     border-left-color: #ff5656;
     padding-left: 3vw;
     padding-right: 1vw;
     margin: 1em 5vw;
   }
+  .doc_comments .comments .sub_comments {
+    padding-left: 0;
+    padding: 0;
+  }
+  ul.sub_comments {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .comment_content {
+    margin: 2em!important;
+  }
+  .author {
+    margin: 2em!important;
+  }
+  .doc_comments .comments .comment {
+    padding: 0 !important;
+    background-color: #fff;
+    border-left: none!important;
+    border-right: none!important;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.18)!important;
+    border-top: 1px solid rgba(150, 150, 150, 0.18)!important;
+    margin: 30px 0 0;
+    list-style: none;
+    border-radius: 5px;
+    word-break: break-word;
+  }
+
 }
