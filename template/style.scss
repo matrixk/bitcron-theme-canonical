@@ -372,6 +372,19 @@ span.md_line {
   margin-bottom: 1em;
 }
 
+.doc_comments #new_comment_form .input_body {
+    padding-top: 0 !important;
+    padding-bottom: 2em !important;
+    height: 18px;
+    margin-top: 12px;
+    position: relative;
+    background-color: #fbfbfb;
+}
+
+.doc_comments #new_comment_form .comment_submit_button {
+    top: -0.2em !important;
+}
+
 
 /*category-------------------------------*/
 
