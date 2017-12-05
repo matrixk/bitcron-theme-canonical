@@ -13,7 +13,7 @@ block content
   year_start_date = '%s-1-1'%request.path.split('/')[-1]
   year_end_date = '%s-1-1'%(request.path.split('/')[-1].int+1)
 
-  year_posts = d.get_data(types='post', limit=300, sort='desc', date_start=year_start_date, date_end=year_end_date)
+  year_posts = d.get_data(types='post', limit=500, sort='desc', date_start=year_start_date, date_end=year_end_date)
   .post_archive: for post in year_posts: .post-archive
       span.content.date= post.date.format("%m-%d")
       a(href=post.url, title=post.title).content.arlist= post.title

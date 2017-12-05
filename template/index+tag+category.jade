@@ -24,11 +24,11 @@ block content
   .post_list
     for post in posts
       article.post_preview
-        +font('hanazono')
-          h2.post_title
+        //+font('hanazono')
+        h2.post_title
             a(href=post.url, target="_blank")= post.title
-        +font('noto-1')
-          ul.info
+        //+font('noto-1')
+        ul.info
             if post.category: span.info_detail
               i.fa.fa-book
               a(href=post.category.url)= post.category.title

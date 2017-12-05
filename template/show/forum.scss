@@ -1,3 +1,4 @@
+
 body {
     line-height: 2.2em;
     font-family: inherit;
@@ -84,4 +85,28 @@ code {
     max-width: 900px;
     margin: 2em auto;
     border-top: 1px solid lightgrey;
+}
+
+.postpager {
+    text-align: center;
+    margin: 1em auto;
+    max-width: 900px;
+    display: flow-root;
+}
+
+a.next_post {
+    float: right;
+    text-align: right;
+}
+
+a.next_post:hover {
+    font-weight: bold;
+}
+
+a.pre_post {
+    float: left;
+}
+
+a.pre_post:hover {
+    font-weight: bold;
 }
